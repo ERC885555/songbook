@@ -19,14 +19,12 @@ git clone https://github.com/seuusuario/songbook.git
 cd songbook
 
 ### 3. Criar o ambiente virtual
-No Windows:
-python -m venv venv
+Rode o arquivo na pasta raiz __reset_env.bat__
 
-Ativar:
-venv\Scripts\activate
+Ele automaticamente apaga o ambiente virtual antigo e cria um novo com as especificações do projeto.
 
 ### 4. Instalar dependências
-pip install -r requirements.txt
+O arquivo __reset_env.bat__ já instala todas as dependências necessárias dentro do ambiente virtual.
 
 ### 5. Personalizar o nome do Songbook
 Na raiz do projeto existe um arquivo config.json:
@@ -50,28 +48,25 @@ O título do índice será atualizado automaticamente para Songbook do Rafael e 
 
 ### 6. Adicionar músicas
 - Coloque seus arquivos .md dentro da pasta musicas/.
-- Cada arquivo deve ter metadados no início, por exemplo:
+- Cada arquivo __NECESSITA__ ter metadados conforme o exemplo abaixo:
 
-# Música: You and I
-# Artista: Ingrid Michaelson
-# Ritmo: Padrão de batida (ex.: DDU UDU)
-# [Acordes]: Quais acordes serão exibidos no cabeçalho (ex.: C, Am, F, G)
+__Música:__ ``Nome da Música``
+__Artista:__ ``Nome do(a) Cantor(a)``
+__Ritmo:__ Padrão de batida (ex.: ``DDU UDU``)
+__[Acordes]:__ Quais acordes serão exibidos no cabeçalho (ex.: ``C, Am, F, G``)
 
-[Letra]
+__[Letra]__
 C
-Primeira linha da letra com acorde
+Primeira linha com acorde
 
 G
-Segunda linha da letra com acorde
+Segunda linha com letra
 
 Am
-Terceira linha da letra...
+Terceira linha com acorde
 
 F
-Quarta linha da letra..
-
-[verso]
-Let’s get rich and buy our parents homes in the south of France...
+Quarta linha com letra
 
 ## ✅ Regras claras para quem usar
 - Música: obrigatório, sempre na primeira linha.
