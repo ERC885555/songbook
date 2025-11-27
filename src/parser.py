@@ -1,7 +1,7 @@
 def parse_musica(md_text: str):
     """
     Lê o conteúdo da música em markdown simples e devolve um dicionário estruturado.
-    Campos: titulo, ritmo, acordes_listados, letra
+    Campos: titulo, artista, ritmo, acordes_listados, letra
     """
     linhas = md_text.splitlines()
     titulo = ""
@@ -14,12 +14,14 @@ def parse_musica(md_text: str):
     for ln in linhas:
         s = ln.strip()
 
-        if s.startswith("# "):
-            titulo = s[2:].strip()
+        # Agora o título só é aceito com "Música:"
+        if s.lower().startswith("música:"):
+            titulo = s.split(":", 1)[1].strip()
             continue
-        
+
         if s.lower().startswith("artista:"):
             artista = s.split(":", 1)[1].strip()
+            continue
 
         if s.lower().startswith("ritmo:"):
             ritmo = s.split(":", 1)[1].strip()

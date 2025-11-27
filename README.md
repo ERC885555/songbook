@@ -48,17 +48,39 @@ Na raiz do projeto existe um arquivo config.json:
 
 O título do índice será atualizado automaticamente para Songbook do Rafael e os acordes serão buscados na pasta correta.
 
-
 ### 6. Adicionar músicas
 - Coloque seus arquivos .md dentro da pasta musicas/.
 - Cada arquivo deve ter metadados no início, por exemplo:
 
-# Título: You and I
+# Música: You and I
 # Artista: Ingrid Michaelson
-# Ritmo: DDU UDU
+# Ritmo: Padrão de batida (ex.: DDU UDU)
+
+[Acordes]
+C, G, Am, F
+
+[Letra]
+C
+Primeira linha da letra com acorde
+
+G
+Segunda linha da letra com acorde
+
+Am
+Terceira linha da letra...
+
+F
+Quarta linha da letra..
 
 [verso]
 Let’s get rich and buy our parents homes in the south of France...
+
+## ✅ Regras claras para quem usar
+- Música: obrigatório, sempre na primeira linha.
+- Artista: obrigatório, logo abaixo.
+- Ritmo: obrigatório, mostra a batida (ex.: DUD UDU).
+- [Acordes]: bloco obrigatório, lista separada por vírgulas.
+- [Letra]: bloco obrigatório, letra da música com acordes posicionados.
 
 ### 7. Gerar o songbook
 No Windows, basta dar duplo clique no arquivo:

@@ -4,14 +4,12 @@ import json
 from src.utils import detectar_acordes
 
 def carregar_config():
-    """Carrega o config.json da raiz do projeto"""
     raiz = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     config_path = os.path.join(raiz, "config.json")
     if os.path.exists(config_path):
         with open(config_path, "r", encoding="utf-8") as f:
             return json.load(f)
-    return {"dominante": "destro"}  # padrão se não existir
-
+    return {"dominante": "destro"}
 
 def gerar_cabecalho_html(titulo, artista, ritmo, acordes, pasta_imagens):
     config = carregar_config()
@@ -19,18 +17,14 @@ def gerar_cabecalho_html(titulo, artista, ritmo, acordes, pasta_imagens):
 
     imgs = []
     for ac in acordes:
-        # Exemplo: acordes/destro/C.png ou acordes/canhoto/C.png
         path = os.path.join(pasta_imagens, dominante, f"{ac}.png")
         if os.path.exists(path):
             imgs.append(
-                f'<figure style="display:inline-block;margin:8px;text-align:center">'
-                f'<img src="../acordes/{dominante}/{ac}.png" alt="{ac} ({dominante})" width="90">'
-                f'<figcaption>{ac}</figcaption></figure>'
+                f'<figure><img src="../acordes/{dominante}/{ac}.png" alt="{ac} ({dominante})"><figcaption>{ac}</figcaption></figure>'
             )
         else:
             imgs.append(
-                f'<span style="display:inline-block;margin:8px;border:1px dashed #aaa;padding:6px">'
-                f'{ac} ({dominante}, sem imagem)</span>'
+                f'<span class="acorde-faltando">{ac} ({dominante}, sem imagem)</span>'
             )
 
     return f"""
@@ -39,11 +33,10 @@ def gerar_cabecalho_html(titulo, artista, ritmo, acordes, pasta_imagens):
   <p style="color:#555;margin-top:0"><strong>Artista:</strong> {artista}</p>
   <p style="color:#555;margin-top:0"><strong>Ritmo:</strong> {ritmo}</p>
   <p style="color:#555;margin-top:0"><strong>Versão:</strong> {dominante.capitalize()}</p>
-  <div>{''.join(imgs)}</div>
+  <div class="acordes">{''.join(imgs)}</div>
 </header>
 <hr>
 """
-
 
 def render_html(musica_struct, pasta_imagens):
     titulo = musica_struct["titulo"]
@@ -53,7 +46,6 @@ def render_html(musica_struct, pasta_imagens):
 
     acordes = musica_struct["acordes_listados"] or detectar_acordes(letra)
 
-    # Escapa HTML e preserva espaços
     letra_html = html.escape(letra).replace(" ", "&nbsp;")
     corpo = f"<div class='letra'>{letra_html}</div>"
 
@@ -74,7 +66,40 @@ header {{
   background-color: #f9f9f9;
   padding: 12px;
   border-radius: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
+}}
+header h1 {{
+  margin: 0 0 4px 0;
+  font-size: 20px;
+}}
+header p {{
+  margin: 2px 0;
+  font-size: 14px;
+}}
+.acordes {{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: start;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}}
+.acordes figure {{
+  margin: 0;
+  text-align: center;
+  width: 80px;
+}}
+.acordes img {{
+  height: 80px;
+  object-fit: contain;
+}}
+.acorde-faltando {{
+  display: inline-block;
+  margin: 8px;
+  border: 1px dashed #aaa;
+  padding: 6px;
+  font-size: 14px;
+  color: #555;
 }}
 .letra {{
   column-count: 2;

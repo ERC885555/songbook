@@ -1,9 +1,9 @@
 import os
+import json
 
 from src.parser import parse_musica
 from src.render import render_html
 from src.validador import validar_musica
-import json
 
 def carregar_config():
     raiz = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -26,16 +26,18 @@ def gerar_index(pasta_saidas):
     config = carregar_config()
     owner = config.get("owner", "Songbook")
     
-    links = []
+    linhas = []
     for nome_arquivo in sorted(os.listdir(pasta_saidas)):
         if nome_arquivo.endswith(".html"):
             base = os.path.splitext(nome_arquivo)[0]
             if " - " in base:
                 artista, titulo = base.split(" - ", 1)
-                texto_link = f"{titulo} – {artista}"
             else:
-                texto_link = base
-            links.append(f'<li><a href="saidas/{nome_arquivo}">{texto_link}</a></li>')
+                artista, titulo = "Desconhecido", base
+
+            linhas.append(
+                f"<tr><td><a href='saidas/{nome_arquivo}'>{titulo}</a></td><td>{artista}</td></tr>"
+            )
 
     conteudo = f"""<!doctype html>
 <html lang="pt-BR">
@@ -59,43 +61,48 @@ def gerar_index(pasta_saidas):
       border: 1px solid #ccc;
       border-radius: 6px;
     }}
-    ul {{
-      list-style: none;
-      padding: 0;
+    table {{
+      width: 100%;
+      border-collapse: collapse;
     }}
-    li {{
-      margin-bottom: 10px;
+    th, td {{
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
     }}
-    a {{
-      text-decoration: none;
-      color: #2c3e50;
-      font-size: 18px;
+    th {{
+      background-color: #f2f2f2;
     }}
-    a:hover {{
-      text-decoration: underline;
+    tr:hover {{
+      background-color: #f9f9f9;
     }}
   </style>
 </head>
 <body>
   <h1>🎶 Songbook do {owner}</h1>
-  
+
   <!-- Caixa de busca -->
   <input type="text" id="search" placeholder="Digite para buscar música ou artista...">
 
-  <ul id="songList">
-    {''.join(links)}
-  </ul>
+  <table id="songTable">
+    <thead>
+      <tr><th>Música</th><th>Artista</th></tr>
+    </thead>
+    <tbody>
+      {''.join(linhas)}
+    </tbody>
+  </table>
 
   <script>
     const searchInput = document.getElementById('search');
-    const songList = document.getElementById('songList');
+    const songTable = document.getElementById('songTable');
+    const rows = songTable.getElementsByTagName('tr');
 
     searchInput.addEventListener('keyup', function() {{
       const filter = searchInput.value.toLowerCase();
-      const items = songList.getElementsByTagName('li');
-      for (let i = 0; i < items.length; i++) {{
-        const text = items[i].textContent.toLowerCase();
-        items[i].style.display = text.includes(filter) ? '' : 'none';
+      for (let i = 1; i < rows.length; i++) {{
+        const text = rows[i].textContent.toLowerCase();
+        rows[i].style.display = text.includes(filter) ? '' : 'none';
       }}
     }});
   </script>
@@ -129,7 +136,6 @@ def processar_todas_as_musicas():
         musica_struct = parse_musica(md_text)
         html = render_html(musica_struct, pasta_acordes)
 
-        # Nome do arquivo: Artista - Título.html
         saida_html_path = os.path.join(
             pasta_saidas,
             f"{musica_struct['artista']} - {musica_struct['titulo']}.html"
@@ -137,7 +143,6 @@ def processar_todas_as_musicas():
         salvar_arquivo(saida_html_path, html)
         print(f"✅ Arquivo gerado: {saida_html_path}")
 
-    # Gera o índice automaticamente com busca
     gerar_index(pasta_saidas)
 
 if __name__ == "__main__":
