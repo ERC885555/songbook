@@ -5,7 +5,7 @@ Artista: Ingrid Michaelson
 Ritmo: DDU UDU
 
 [Acordes]  
-C, Csus4, Am, F, E7, G, Gsus4, D7  
+C, F, Am, E7, G, D  
   
 [Letra]  
 C  

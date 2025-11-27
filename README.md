@@ -55,9 +55,7 @@ O título do índice será atualizado automaticamente para Songbook do Rafael e 
 # Música: You and I
 # Artista: Ingrid Michaelson
 # Ritmo: Padrão de batida (ex.: DDU UDU)
-
-[Acordes]
-C, G, Am, F
+# [Acordes]: Quais acordes serão exibidos no cabeçalho (ex.: C, Am, F, G)
 
 [Letra]
 C

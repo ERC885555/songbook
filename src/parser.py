@@ -35,10 +35,13 @@ def parse_musica(md_text: str):
             continue
 
         if sec == "acordes":
-            # separa por vírgula
-            acordes_listados = [a.strip() for a in s.split(",") if a.strip()]
+            # acumula acordes de todas as linhas, separados por vírgula
+            acordes_listados.extend([a.strip() for a in s.split(",") if a.strip()])
         elif sec == "letra":
             letra_lines.append(ln)
+
+    # remove duplicados mantendo a ordem
+    acordes_listados = list(dict.fromkeys(acordes_listados))
 
     letra = "\n".join(letra_lines).strip()
     return {

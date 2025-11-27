@@ -1,7 +1,6 @@
 import os
 import html
 import json
-from src.utils import detectar_acordes
 
 def carregar_config():
     raiz = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -43,8 +42,7 @@ def render_html(musica_struct, pasta_imagens):
     artista = musica_struct["artista"]
     ritmo = musica_struct["ritmo"]
     letra = musica_struct["letra"]
-
-    acordes = musica_struct["acordes_listados"] or detectar_acordes(letra)
+    acordes = musica_struct.get("acordes_listados", [])
 
     letra_html = html.escape(letra).replace(" ", "&nbsp;")
     corpo = f"<div class='letra'>{letra_html}</div>"
@@ -116,6 +114,18 @@ footer {{
   color: #888;
   margin-top: 40px;
 }}
+@media print {{
+  body {{
+    margin: 5mm;
+  }}
+  header {{
+    margin-bottom: 8px;
+    padding: 6px;
+  }}
+  .letra {{
+    column-gap: 24px;
+  }}
+}}
 </style>
 </head>
 <body>
@@ -126,6 +136,5 @@ footer {{
   Gerado em 27/11/2025
 </footer>
 </body>
-</html>
-"""
+</html>"""
     return base
