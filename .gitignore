@@ -1,0 +1,21 @@
+# Ambiente virtual
+venv/
+
+# Arquivos temporários do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Configurações locais
+*.env
+*.log
+
+# Saídas geradas automaticamente
+saidas/*.html
+index.html
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+Roadmap.md

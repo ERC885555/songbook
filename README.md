@@ -1,2 +1,102 @@
-# songbook
-Músicas para Ukulele
+# 🎶 Songbook do Emanuel
+
+Um songbook digital simples e automático.  
+Você coloca suas músicas em formato `.md` na pasta `musicas/` e o projeto gera páginas HTML organizadas por artista e título, além de um índice com busca.
+
+---
+
+## 🚀 Como usar
+
+### 1. Instalar o Python
+- Certifique-se de ter o **Python 3.10+** instalado.
+- Para verificar, rode:
+  ```bash
+  python --version
+
+### 2. Clonar o repositório
+Baixe o projeto do GitHub:
+git clone https://github.com/seuusuario/songbook.git
+cd songbook
+
+### 3. Criar o ambiente virtual
+No Windows:
+python -m venv venv
+
+Ativar:
+venv\Scripts\activate
+
+### 4. Instalar dependências
+pip install -r requirements.txt
+
+### 5. Personalizar o nome do Songbook
+Na raiz do projeto existe um arquivo config.json:
+
+{
+  "owner": "Emanuel",
+  "dominante": "destro"
+}
+
+- Troque "owner" pelo seu nome.
+- Troque "dominante" para "destro" ou "canhoto", conforme sua preferência.
+- Exemplo: se o Rafael baixar o projeto e for canhoto, basta editar para:
+
+
+{
+  "owner": "Rafael",
+  "dominante": "canhoto"
+}
+
+O título do índice será atualizado automaticamente para Songbook do Rafael e os acordes serão buscados na pasta correta.
+
+
+### 6. Adicionar músicas
+- Coloque seus arquivos .md dentro da pasta musicas/.
+- Cada arquivo deve ter metadados no início, por exemplo:
+
+# Título: You and I
+# Artista: Ingrid Michaelson
+# Ritmo: DDU UDU
+
+[verso]
+Let’s get rich and buy our parents homes in the south of France...
+
+### 7. Gerar o songbook
+No Windows, basta dar duplo clique no arquivo:
+- gerar_songbook.bat → rápido, só gera os HTMLs e o índice.
+- reset_env.bat → recria o ambiente virtual do zero e instala dependências (use apenas se mudar bibliotecas).
+
+### 8. Abrir o songbook
+- Após rodar o .bat, abra o arquivo index.html na raiz do projeto.
+- Você verá uma lista com todas as músicas.
+- Use a caixa de busca para filtrar por título ou artista
+
+### 📂 Estrutura de pastas
+
+songbook/
+│
+├── src/              # Código fonte (parser, render, main.py, utils)
+├── musicas/          # Suas músicas em formato .md
+├── acordes/          # Diagramas de acordes (separados em destro/ e canhoto/)
+├── saidas/           # HTMLs gerados automaticamente
+├── index.html        # Índice com busca (gerado automaticamente)
+├── config.json       # Configuração do nome e mão dominante
+├── requirements.txt  # Dependências do projeto
+├── gerar_songbook.bat
+└── reset_env.bat
+
+### 🛠️ Dicas
+- Não edite manualmente os arquivos em saidas/ ou o index.html. Eles são gerados automaticamente.
+- Sempre edite/adicione músicas em musicas/.
+- Se algo der errado, rode o reset_env.bat para recriar o ambiente.
+- O projeto funciona localmente, mas pode ser publicado no GitHub Pages ou intranet se quiser.
+
+### 👶 Tutorial para iniciantes
+- Instale Python.
+- Baixe o projeto.
+- Crie o venv e instale dependências.
+- Personalize o nome e a mão dominante no config.json.
+- Coloque suas músicas em musicas/.
+- Organize os acordes em acordes/destro/ e acordes/canhoto/.
+- Clique em gerar_songbook.bat.
+- Abra index.html.
+- Cante e seja feliz 🎤🎶
