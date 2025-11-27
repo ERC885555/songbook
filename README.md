@@ -15,7 +15,7 @@ Você coloca suas músicas em formato `.md` na pasta `musicas/` e o projeto gera
 
 ### 2. Clonar o repositório
 Baixe o projeto do GitHub:
-git clone https://github.com/ERC885555/songbook
+git clone https://github.com/ERC885555/songbook 
 cd songbook
 
 ### 3. Criar o ambiente virtual
@@ -88,16 +88,16 @@ No Windows, basta dar duplo clique no arquivo:
 ### 📂 Estrutura de pastas
 
 songbook/
-│
-├── src/              # Código fonte (parser, render, main.py, utils)
-├── musicas/          # Suas músicas em formato .md
-├── acordes/          # Diagramas de acordes (separados em destro/ e canhoto/)
-├── saidas/           # HTMLs gerados automaticamente
-├── index.html        # Índice com busca (gerado automaticamente)
-├── config.json       # Configuração do nome e mão dominante
-├── requirements.txt  # Dependências do projeto
-├── gerar_songbook.bat
-└── reset_env.bat
+
+── src/              # Código fonte (parser, render, main.py, utils)
+── musicas/          # Suas músicas em formato .md
+── acordes/          # Diagramas de acordes (separados em destro/ e canhoto/)
+── saidas/           # HTMLs gerados automaticamente
+── index.html        # Índice com busca (gerado automaticamente)
+── config.json       # Configuração do nome e mão dominante
+── requirements.txt  # Dependências do projeto
+── gerar_songbook.bat
+── reset_env.bat
 
 ### 🛠️ Dicas
 - Não edite manualmente os arquivos em saidas/ ou o index.html. Eles são gerados automaticamente.
