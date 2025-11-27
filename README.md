@@ -15,7 +15,7 @@ Você coloca suas músicas em formato `.md` na pasta `musicas/` e o projeto gera
 
 ### 2. Clonar o repositório
 Baixe o projeto do GitHub:
-git clone https://github.com/seuusuario/songbook.git
+git clone https://github.com/ERC885555/songbook
 cd songbook
 
 ### 3. Criar o ambiente virtual
