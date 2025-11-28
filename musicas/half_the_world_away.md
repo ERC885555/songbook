@@ -8,71 +8,72 @@ Ritmo: DDU UDU
 C, F, G, Am, E7, G7, Fm, D  
   
 [Letra]  
-C 				F
+C                 F
 I would like to leave this city
-C 					F
-This old town don't smell too pretty and
-C 	   G 		Am
+C                      F
+ This old town don't smell too pretty and
+C      G        Am
 I can feel the warning signs
-D 				  F
+D                  F
 Running around my mind
-C 		   F
+C          F
 And when I leave this island
-C 						F
+C                        F
 I'll book myself into a soul asylum
-C 			  G 	   Am
+C             G        Am
 'Cause I can feel the warning signs
-D 					F    Am     C
-Running around my mind, Here I go
-			E7 						Am 
+D                   F    Am        C
+Running around my mind,     Here I go
+           E7                       Am 
 I'm still scratching around in the same old hole
-	F 						D 			G 	G7
+    F                      D             G   G7
 My body feels young but my mind is very old
-Am 				C
+Am              C
 So what do you say?
-			E7 							Am
+           E7                          Am
 You can't give me the dreams that are mine 
 anyway
-		F 					Fm
+        F                   Fm
 You're half the world away, Half the world away
-C 		  G 	Am
+C        G      Am
 Half the world away
-		   D 							F
+           D                           F
 I've been lost, I've been found but I don't feel down
 
-C 			F
+C           F
 And when I leave this planet
-	 C 					 F
+     C                   F
 You know I'd stay but I just can't stand it and
-C 	   G 		Am
+C      G        Am
 I can feel the warning signs
-D 				   F
+D                 F
 Running around my mind
-C 				F
+C               F
 And if I could leave this spirit
-	  C 				 F
+      C                   F
 I'll find me a hole and I'll live in it and
-C 		G 		Am
-I can feel the warning signs
-D 					F 	Am 		C
-Running around my mind, Here I go
-			E7 						Am 
+C        G       Am
+  I can feel the warning signs
+D                   F    Am        C
+Running around my mind,     Here I go
+           E7                       Am 
 I'm still scratching around in the same old hole
-	F 						D 			G 	G7
+    F                      D             G   G7
 My body feels young but my mind is very old
-Am 				C
+Am              C
 So what do you say?
-		   E7 						   Am
-You can't give me the dreams that are mine anyway
-		F 					Fm
+           E7                          Am
+You can't give me the dreams that are mine 
+anyway
+        F                   Fm
 You're half the world away, Half the world away
-C 		  G 	Am
+C        G      Am
 Half the world away
-		   D 						   F
+           D                           F
 I've been lost, I've been found but I don't feel down
-		Fm 					  F 			Fm
+       Fm                    F             Fm
 No, I don't feel down, No, I don't feel down
-C F			C F 				C
-I don't feel down, I don't feel down
-F 			  C 	F C
-I don't feel down
+C F             C  F                C
+   I don't feel down, I don't feel down
+F               C 	F C
+  I don't feel down

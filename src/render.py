@@ -28,12 +28,21 @@ def gerar_cabecalho_html(titulo, artista, ritmo, acordes, pasta_imagens):
 
     return f"""
 <header>
-  <h1 style="margin-bottom:4px">{titulo}</h1>
-  <p style="color:#555;margin-top:0"><strong>Artista:</strong> {artista}</p>
-  <p style="color:#555;margin-top:0"><strong>Ritmo:</strong> {ritmo}</p>
-  <p style="color:#555;margin-top:0"><strong>Versão:</strong> {dominante.capitalize()}</p>
+  <h1>{titulo}</h1>
+  <p><strong>Artista:</strong> {artista}</p>
+  <p><strong>Ritmo:</strong> {ritmo}</p>
+  <p><strong>Versão:</strong> <span id="versao-label">{dominante.capitalize()}</span></p>
   <div class="acordes">{''.join(imgs)}</div>
+  <div class="invert-controls">
+    <button onclick="toggleDominante()" class="invert-btn">
+      🔄 Alternar Destro/Canhoto
+    </button>
+  </div>
 </header>
+<div class="zoom-controls">
+  <button onclick="zoomIn()" class="zoom-btn">🔍➕ Zoom In</button>
+  <button onclick="zoomOut()" class="zoom-btn">🔍➖ Zoom Out</button>
+</div>
 <hr>
 """
 
@@ -73,6 +82,24 @@ header h1 {{
 header p {{
   margin: 2px 0;
   font-size: 14px;
+  color: #555;
+}}
+.invert-controls {{
+  margin-bottom: 16px;
+}}
+.invert-btn {{
+  background-color: #FF9800;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}}
+.invert-btn:hover {{
+  background-color: #e68900;
+  transform: scale(1.05);
 }}
 .acordes {{
   display: flex;
@@ -99,25 +126,27 @@ header p {{
   font-size: 14px;
   color: #555;
 }}
-.layout-toggle {{
+button {{
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}}
+.layout-toggle, .zoom-btn {{
   background-color: #0078D4;
   color: white;
   border: none;
   padding: 10px 16px;
-  font-size: 14px;
-  font-weight: 500;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-bottom: 20px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 12px;
+  margin-right: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }}
-.layout-toggle:hover {{
+.layout-toggle:hover, .zoom-btn:hover {{
   background-color: #005fa3;
-  transform: scale(1.03);
+  transform: scale(1.05);
 }}
 .letra {{
-  column-count: 2;   /* padrão: 2 blocos */
+  column-count: 2;
   column-gap: 40px;
   column-rule: 2px solid #000;
   font-family: monospace;
@@ -126,13 +155,16 @@ header p {{
   white-space: pre-wrap;
 }}
 .one-column {{
-  column-count: 1;   /* alterna para 1 bloco */
+  column-count: 1;
 }}
 footer {{
   text-align: center;
   font-size: 12px;
   color: #888;
   margin-top: 40px;
+}}
+.zoom-controls {{
+  margin-bottom: 16px;
 }}
 @media print {{
   body {{
@@ -151,7 +183,6 @@ footer {{
 <body>
 {gerar_cabecalho_html(titulo, artista, ritmo, acordes, pasta_imagens)}
 
-<!-- Botão estilizado para alternar layout -->
 <button onclick="toggleColumns()" class="layout-toggle">
   🎛️ Alternar entre 1 ou 2 blocos
 </button>
@@ -167,6 +198,42 @@ footer {{
 function toggleColumns() {{
   const song = document.getElementById('song');
   song.classList.toggle('one-column');
+}}
+
+let currentSize = 80;
+
+function zoomIn() {{
+  currentSize += 10;
+  updateSize();
+}}
+
+function zoomOut() {{
+  if (currentSize > 40) {{
+    currentSize -= 10;
+    updateSize();
+  }}
+}}
+
+function updateSize() {{
+  const imgs = document.querySelectorAll('.acordes img');
+  imgs.forEach(img => {{
+    img.style.height = currentSize + 'px';
+  }});
+}}
+
+let dominanteAtual = "destro";
+
+function toggleDominante() {{
+  dominanteAtual = (dominanteAtual === "destro") ? "canhoto" : "destro";
+  const imgs = document.querySelectorAll('.acordes img');
+  imgs.forEach(img => {{
+    const nomeAcorde = img.alt.split(" ")[0];
+    img.src = "../acordes/" + dominanteAtual + "/" + nomeAcorde + ".png";
+    img.alt = nomeAcorde + " (" + dominanteAtual + ")";
+  }});
+
+  const versaoLabel = document.getElementById("versao-label");
+  versaoLabel.textContent = dominanteAtual.charAt(0).toUpperCase() + dominanteAtual.slice(1);
 }}
 </script>
 </body>
