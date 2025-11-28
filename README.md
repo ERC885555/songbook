@@ -32,17 +32,15 @@ Na raiz do projeto existe um arquivo config.json:
 
 {
   "owner": "Emanuel",
-  "dominante": "destro"
 }
 
 - Troque "owner" pelo seu nome.
-- Troque "dominante" para "destro" ou "canhoto", conforme sua preferência.
+
 - Exemplo: se o Rafael baixar o projeto e for canhoto, basta editar para:
 
 
 {
   "owner": "Rafael",
-  "dominante": "canhoto"
 }
 
 O título do índice será atualizado automaticamente para Songbook do Rafael e os acordes serão buscados na pasta correta.
@@ -85,6 +83,9 @@ No Windows, basta dar duplo clique no arquivo:
 - Após rodar o .bat, abra o arquivo index.html na raiz do projeto.
 - Você verá uma lista com todas as músicas.
 - Use a caixa de busca para filtrar por título ou artista
+- Logo quando você abre a música selecionada, você pode optar por ver a versão _destro_ ou _canhoto_. Ela modificará com apenas um botão
+- Nas músicas, você perceberá que há um *zoom in* e *zoom out* para aumentar ou diminuir o tamanho dos acordes e ficar mais confortável para você tocar
+- Também há um botão para deixar em apenas uma ou duas colunas a __letra__ com os __acordes__ e ficar melhor para imprimir ou não
 
 ### 📂 Estrutura de pastas
 
@@ -116,3 +117,5 @@ songbook/
 - Clique em gerar_songbook.bat.
 - Abra index.html.
 - Cante e seja feliz 🎤🎶
+
+### Por favor, se achar algum erro me avise e esteja livre para utilizar dentro dos seus projetos, contanto que dê os devidos créditos.
