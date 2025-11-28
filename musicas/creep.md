@@ -1,0 +1,56 @@
+Música: Creep
+
+Artista: Radiohead
+
+Ritmo: D D D DU
+
+[Acordes]  
+G, B, C, Cm
+  
+[Letra]  
+[Verso]
+                     G                              B
+When you were here before, couldn't look you in the eyes
+                    C                         Cm
+You're just like an angel, your skin makes me cry
+                 G                      B
+You float like a feather in a beautiful world
+             C                          Cm
+I wish I was special, you're so fucking special
+
+[Refrão]
+G -x3-
+          G            B
+But I'm a creep, I'm a weirdo
+                         C               Cm
+What the hell am I doing here? I don't belong here
+
+[Verso]
+                   G                      B
+I don't care if it hurts, I wanna have control
+                 C                      Cm
+I want a perfect body, I want a perfect soul
+              G                    B
+I want you to notice when I'm not around
+                  C                     Cm
+You're so xxxxing special, I wish I was special
+ 
+[Refrão]
+ 
+[Brigde]
+            G                  B
+Oooh, oooh, she's running out the door...
+C                      Cm
+She's running out, she run, run, run...
+G     B
+Ruuuuuuuun...
+C     Cm
+Ruuuuuuuuuuun...
+ 
+[Verso]
+                   G                   B
+Whatever makes you happy, whatever you want
+                  C                     Cm
+You're so xxxxing special, I wish I was special
+ 
+[Refrão]
