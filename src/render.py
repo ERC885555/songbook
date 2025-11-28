@@ -45,7 +45,7 @@ def render_html(musica_struct, pasta_imagens):
     acordes = musica_struct.get("acordes_listados", [])
 
     letra_html = html.escape(letra).replace(" ", "&nbsp;")
-    corpo = f"<div class='letra'>{letra_html}</div>"
+    corpo = f"<div id='song' class='letra'>{letra_html}</div>"
 
     base = f"""<!doctype html>
 <html lang="pt-BR">
@@ -99,14 +99,34 @@ header p {{
   font-size: 14px;
   color: #555;
 }}
+.layout-toggle {{
+  background-color: #0078D4;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}}
+.layout-toggle:hover {{
+  background-color: #005fa3;
+  transform: scale(1.03);
+}}
 .letra {{
-  column-count: 2;
+  column-count: 2;   /* padrão: 2 blocos */
   column-gap: 40px;
   column-rule: 2px solid #000;
   font-family: monospace;
   font-size: 16px;
   line-height: 1.4;
   white-space: pre-wrap;
+}}
+.one-column {{
+  column-count: 1;   /* alterna para 1 bloco */
 }}
 footer {{
   text-align: center;
@@ -130,11 +150,25 @@ footer {{
 </head>
 <body>
 {gerar_cabecalho_html(titulo, artista, ritmo, acordes, pasta_imagens)}
+
+<!-- Botão estilizado para alternar layout -->
+<button onclick="toggleColumns()" class="layout-toggle">
+  🎛️ Alternar entre 1 ou 2 blocos
+</button>
+
 {corpo}
+
 <footer>
   Criado por Emanuel Robert Costa – Songbook pessoal<br>
   Gerado em 27/11/2025
 </footer>
+
+<script>
+function toggleColumns() {{
+  const song = document.getElementById('song');
+  song.classList.toggle('one-column');
+}}
+</script>
 </body>
 </html>"""
     return base
