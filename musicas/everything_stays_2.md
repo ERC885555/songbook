@@ -11,9 +11,7 @@ Gm7, Cm7, B7, Em, C, G, D
 
 (fingerpicking 1 : 1-2-T 3-2 1 T23 1)
 
-Verse 1:
-
-
+[Verso]
 Gm7             Cm7
 Let's go in the garden
 Gm7                             B7
@@ -35,8 +33,7 @@ The underside is lighter
                  G          D
 When you turn it around
 
-Chorus:
-
+[Refrão]
                    Am                                Em
 Everything stays right where you left it
                     D       B7           Em

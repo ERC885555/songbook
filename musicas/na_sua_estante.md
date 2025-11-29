@@ -7,7 +7,8 @@ Ritmo: D DU UD
 [Acordes]  
 C, F, G, Am  
   
-[Letra]  
+[Letra]
+[Verso1]
 C
 Te vejo errando, isso não é pecado
 Am
@@ -27,14 +28,8 @@ Cê acha que eu sou louca, mas tudo vai se encaixar
 G
 Tô aproveitando cada segundo
 Antes que isso aqui vire uma tragédia
-F                     G
-E não adianta nem me procurar
-    C(DD) G(DD)          Am
-Em outros timbres, outros risos
-F                      G
-Eu estava aqui o tempo todo
-     Am
-Só você não viu
+
+[Refrão] 2X
 F                     G
 E não adianta nem me procurar
     C(DD) G(DD)          Am
@@ -44,6 +39,7 @@ Eu estava aqui o tempo todo
      Am
 Só você não viu
 
+[Verso2]
 C
 Você tá sempre indo e vindo, tudo bem
 Am
@@ -60,21 +56,9 @@ G
 Tô aproveitando cada segundo
 Antes que isso aqui vire uma tragédia
 F                     G
-E não adianta nem me procurar
-    C(DD) G(DD)          Am
-Em outros timbres, outros risos
-F                      G
-Eu estava aqui o tempo todo
-     Am
-Só você não viu
-F                     G
-E não adianta nem me procurar
-    C(DD) G(DD)          Am
-Em outros timbres, outros risos
-F                      G
-Eu estava aqui o tempo todo
-     Am
-Só você não viu
+
+[Refrão] 2X
+
 F                G     Am
 Só por hoje não quero mais te ver
 F                     G          Am

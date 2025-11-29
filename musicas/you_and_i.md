@@ -7,7 +7,8 @@ Ritmo: DDU UDU
 [Acordes]  
 C, F, Am, E7, G, D  
   
-[Letra]  
+[Letra]
+[Verso1]
 C  
 Don't you worry there my honey  
 F  
@@ -21,6 +22,8 @@ F                             Am
 Maybe I wanna do what bunnies do  
                              F  
 With you, If you know what I mean   
+
+[Refrão]
       C                E7              F  
 Oh, let's get rich and buy our parents homes  
                 C  
@@ -35,7 +38,8 @@ Let's get rich and build our house on a mountain
 Making everybody look like ants  
             C              G          C  
 From way up there, you and I, you and I  
-  
+
+[Verso2]
 C  
 Well you might be a bit confused  
 F  
@@ -50,17 +54,4 @@ If you will soothe my worried looks
 Am                                  F  
 And we will put the lonesome on the shelf  
 
-      C                E7              F  
-Oh, let's get rich and buy our parents homes  
-                C  
-in the South of France  
-          C                  E7  
-Let's get rich and give everybody nice sweaters  
-    F                 G  
-And teach them how to dance  
-          C                  E7  
-Let's get rich and build our house on a mountain  
-       F                   D  
-Making everybody look like ants  
-            C              G          C  
-From way up there, you and I, you and I  
+[Refrão]

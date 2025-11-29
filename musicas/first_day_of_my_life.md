@@ -11,7 +11,7 @@ C, E7, Am, F, G, D7, G7, E, Dm, Fm
 [Introdução]
 C E7 Am F G C
 
-[Verso]
+[Verso1]
 C               E7              Am
    This is the first day of my life
 F               G                C
@@ -40,7 +40,7 @@ But I realized how I need you and
                            C     E7    Am    Dm    Fm
 I wondered if I could come home 
 
-[Verso]
+[Verso2]
 C                  E7                Am
    I remember the time you drove all night 
 F          G              C

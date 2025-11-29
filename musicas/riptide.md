@@ -8,7 +8,7 @@ Ritmo: D👻D 👻👻UDU
 Am, G, C, F
   
 [Letra]
-[Verso]
+[Verso1]
 Am              G                 C    C
 I was scared of dentists and the dark
 Am              G                 C            C  
@@ -37,7 +37,7 @@ I gotta lump in my throat cos
 G                           C     C
 You're gonna sing the words wrong
 
-[Verso]
+[Verso2]
 Am                  G                   C    C
 There's this movie that I think you'll like
 Am                  G                C                C
@@ -71,6 +71,4 @@ I swear she's destined for the screen
 Am/              G/               C/
 Closest thing to Michelle Phipher that you've ever seen oh
 
-[Refrão]
-
-[Refrão]
+[Refrão] 2x

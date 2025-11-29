@@ -12,7 +12,7 @@ Cadd9, Em7, C, Em, D, G,
 [Introdução]
 Cadd9   Em7   C   Em   Cadd9   Em7   C   Em
 
-[Verso]
+[Verso1]
 Cadd9                  Em7
 I hear the clock, it's six A.M
 C                 Em
@@ -44,7 +44,7 @@ You were meant for me
     D               Em
 And I was meant for you
 
-[Verso]
+[Verso2]
 Cadd9                      Em7
 I called my mamma, she was out for a walk
     C                                    
@@ -68,7 +68,7 @@ It made me miss you, oh so bad 'cause
 
 [Refrão]
 
-[Verso]
+[Verso3]
   C                        D
 I go about my business, I'm doing fine
          G             D    
@@ -80,8 +80,10 @@ Same old story, not much to say
 Em
    Hearts are broken, every day
 
+[Solo]
 Cadd9   Em7   C   Em
 
+[Verso4]
 Cadd9                      Em7
 I brush my teeth, I put the cap back on
 C                         Em

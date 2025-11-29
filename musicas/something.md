@@ -8,7 +8,7 @@ Ritmo: D D U UD D DU
 F, Eb, G7, C, CB ,C7, D, D7, G, Am, Am7, Am#7 ,Amaj7, Fm, A
   
 [Letra]
-[Verso]
+[Verso1]
 F   Eb   G7   C                             C/B  
                    Something in the way she moves
 C7                           F
@@ -42,7 +42,7 @@ I don't know, I don't know
 C   C/B   C7   F   D   D7   G
 Am   Am#7   Am7   D7   F   Eb   G7
 
-[Verso]
+[Verso2]
 C                        C/B
 Something in the way she knows
 C7                      F

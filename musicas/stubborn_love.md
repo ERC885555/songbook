@@ -11,7 +11,7 @@ F, Am, C, G
 [Introdução]
 F Am   F C   F Am G C  (2x)
 
-[Verso]
+[Verso1]
        F                  Am
 She'll lie and steal and cheat
     F                C
@@ -33,7 +33,7 @@ When it got cold, oooooooo we bundled up
             C      Am      G            C
 I can't be told, aaaaaaaah it can't be done
 
-[Verso]
+[Verso2]
     F               Am
 It's better to feel pain
     F            C
@@ -69,7 +69,6 @@ I never trusted my own eyes
 
 [Refrão]
 
-[Verso]
              F/    C/           G/   Am/    G
 So keep your head up, keep your love
           F/    C/    G/   Am    G

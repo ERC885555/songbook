@@ -7,7 +7,8 @@ Ritmo: DU DU DU
 [Acordes]  
 Bb, Em7, Bm7, Bbm7, Am7, D, Eb, C  
   
-[Letra]  
+[Letra]
+[Verso1]
         Em7                                              Bm7
 Pisando descalço nesse chão molhado Deito do teu lado para relaxar
         Em7                                              Bm7
@@ -37,7 +38,7 @@ C                       D                         Em7
 C                       D                         Em7
   Não importa a feira é dia de doideira e não de Trabalhar
 
-solo: 
+[Verso2]
              Em7                 Bm7
 Brinco pelo espaço, estreitando laços Eu não tenho fardos para carregar
              Em7                                              Bm7 

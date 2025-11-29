@@ -25,7 +25,7 @@ But I'm a creep, I'm a weirdo
                          C               Cm
 What the hell am I doing here? I don't belong here
 
-[Verso]
+[Verso1]
                    G                      B
 I don't care if it hurts, I wanna have control
                  C                      Cm
@@ -47,7 +47,7 @@ Ruuuuuuuun...
 C     Cm
 Ruuuuuuuuuuun...
  
-[Verso]
+[Verso2]
                    G                   B
 Whatever makes you happy, whatever you want
                   C                     Cm

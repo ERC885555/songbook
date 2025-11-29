@@ -11,7 +11,7 @@ A, C, Dm, Em, G
 [Introdução]
 Em G D A (D D DU)
 
-[Verso]
+[Verso1]
 Em        G 
  Today is gonna be the day
              D                      A     
@@ -58,10 +58,11 @@ And after all,
           Em   C      Em  G
 You're my wonderwall.
 
-[Verso]
+[Verso2]
+
 [Bridge]
-[Refrão]
-[Refrão]
+
+[Refrão] 2x
 
 [Outro]
         C    Em    G

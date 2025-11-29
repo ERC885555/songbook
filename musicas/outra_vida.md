@@ -8,7 +8,7 @@ Ritmo: DDU UD UD
 Dm, Am, Bb, Gm, C
   
 [Letra]  
-
+[Verso1]
 Dm
   Talvez não seja nessa vida ainda
             Am
@@ -34,7 +34,7 @@ Bb                     Am
      Gm           C            Dm
   Pode crer, que tudo vai dar certo
 
-(refrão)
+[Refrão]
       Am
 Uebaruieio
          Bb         Am
@@ -48,6 +48,7 @@ Pois não da pra  viver nessa vida morrendo de
   Dm   Am
 Amor...Ôio...
 
+[Verso2]
 Dm
   Talvez não seja nessa vida ainda
             Am
@@ -62,16 +63,4 @@ E o vento certo vai soprar no mar
      Gm           C            Dm
   Pode crer, que tudo vai dar certo....
 
-(refrão)
-      Am
-Uebaruieio
-         Bb         Am
-Sou pescador, sonhador
-      Bb                     Am
-Vou dizer pra Deus nosso Senhor
-      Bb                   Am
-Que tu és o amor da minha vida
-         Gm                  C
-Pois não da pra  viver nessa vida morrendo de
-  Dm   Am
-Amor...ôio...
+[Refrão]

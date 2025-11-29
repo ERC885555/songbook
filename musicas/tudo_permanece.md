@@ -7,7 +7,8 @@ Ritmo: D DU D
 [Acordes]  
 G, Cmaj7, B7, Em, C7, D, Am, G7  
   
-[Letra]  
+[Letra]
+[Verso1]
 G           Cmaj7
 Vamos no jardim lá
 G             B7
@@ -24,11 +25,13 @@ Em                C7
 Virando vê que o lado
 G               D
 Debaixo não apagou
-Am
+
+[Refrão]
+           Am
 tudo permanece bem
        Em
 Onde você deixou
-D
+           D
 tudo permanece 
 B7         Em
 mas ainda muda
@@ -41,6 +44,7 @@ o sutil acontece
                  G
 quando tudo permanece
 
+[Verso2]
 G          Cmaj7
 Desça o oceano
 G             B7
@@ -57,23 +61,5 @@ Em              C7
 cuidado com as ondas para
 G          D
 não se afogar
-Am
-tudo permanece 
-Em
-na mesma posição
-Am
-tudo permanece bem
-       Em
-Onde você deixou
-D
-tudo permanece 
-B7         Em
-mas ainda muda
-G7       Cmaj7
-bem levemente
-C7           G
-De dia e de noite
-             D
-o sutil acontece
-                 G
-quando tudo permanece
+
+[Refrão]

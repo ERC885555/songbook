@@ -11,7 +11,7 @@ C, G, Am, E7, F, Fm
 [Introdução]
 C   F   C   F
 
-[Verso]
+[Verso1]
 C               G           Am
 Slip inside the eye of your mind
           E7             F    G
@@ -51,7 +51,7 @@ But don't look back in anger, I heard you say
 
 G   Am   E7   F   G   C   Am   G
 
-[Verso]
+[Verso2]
 C               G              Am
 Take me to the place where you go
        E7    F      G                C   Am   G
