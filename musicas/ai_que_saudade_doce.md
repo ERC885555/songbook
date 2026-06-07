@@ -10,55 +10,55 @@ G, C, Em, Am, D
 [Letra]
 
 [Verso]
-G					C
+G                    C
 Não se admire se um dia
                  G
 Um beija-flor invadir
-				C
+                 C
 A porta da tua casa
-					G
+                     G
 Te der um beijo e partir
-					  Em
+                       Em
 Fui eu que mandei um beijo
-						Am
+                        Am
 Que é pra matar meu desejo
-						 D
+                          D
 Faz tempo que eu não te vejo
-				  G
+                  G
 Ai que saudade d'ocê
 
 [Verso]
-G						C
+G                     C
 Se um dia você se lembrar
-						G
+                        G
 Escreva uma carta pra mim
-				C
+                  C
 Bote logo no correio
-					G
+                     G
 Com frases dizendo assim
-						Em
+                         Em
 Faz tempo que eu não te vejo
-					Am
+                    Am
 Quero matar meu desejo
-					 D
+                       D
 Te mando um monte de beijo
-					G
+                    G
 Ai que saudade sem fim
 
 [Verso]
-G				  C
+G                 C
 E se quiser recordar
-				G
+                 G
 Aquele nosso namoro
-				C
+                C
 Quando eu ia viajar
-			    G
+               G
 Você caía no choro
-				  Em
+                     Em
 Eu chorando pela estrada
-					Am
+                      Am
 Mas o que eu posso fazer
-				   D
+                   D
 Trabalhar é minha sina
-					G
+                   G
 Eu gosto mesmo é d'ocê
