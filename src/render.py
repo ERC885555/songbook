@@ -85,4 +85,162 @@ header h1 {{
 }}
 header p {{
   margin: 2px 0;
-  font-size
+  font-size: 14px;
+  color: #555;
+}}
+.invert-controls {{
+  margin-bottom: 16px;
+}}
+.invert-btn {{
+  background-color: #FF9800;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}}
+.invert-btn:hover {{
+  background-color: #e68900;
+  transform: scale(1.05);
+}}
+.acordes {{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: start;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}}
+.acordes figure {{
+  margin: 0;
+  text-align: center;
+  width: 80px;
+}}
+.acordes img {{
+  height: 80px;
+  object-fit: contain;
+}}
+.acorde-faltando {{
+  display: inline-block;
+  margin: 8px;
+  border: 1px dashed #aaa;
+  padding: 6px;
+  font-size: 14px;
+  color: #555;
+}}
+button {{
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}}
+.layout-toggle, .zoom-btn {{
+  background-color: #0078D4;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  margin-bottom: 12px;
+  margin-right: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}}
+.layout-toggle:hover, .zoom-btn:hover {{
+  background-color: #005fa3;
+  transform: scale(1.05);
+}}
+.letra {{
+  column-count: 2;
+  column-gap: 40px;
+  column-rule: 2px solid #000;
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}}
+.one-column {{
+  column-count: 1;
+}}
+footer {{
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+  margin-top: 40px;
+}}
+.zoom-controls {{
+  margin-bottom: 16px;
+}}
+@media print {{
+  body {{
+    margin: 5mm;
+  }}
+  .invert-controls,
+  .zoom-controls,
+  .layout-toggle {{
+    display: none; /* não imprime botões */
+  }}
+  .letra {{
+    column-gap: 24px;
+  }}
+}}
+</style>
+</head>
+<body>
+{gerar_cabecalho_html(titulo, artista, ritmo, acordes, pasta_imagens)}
+
+<button onclick="toggleColumns()" class="layout-toggle">
+  🎛️ Alternar entre 1 ou 2 blocos
+</button>
+
+{corpo}
+
+<footer>
+  Criado por Emanuel Robert Costa – Songbook pessoal<br>
+  Gerado em 27/11/2025
+</footer>
+
+<script>
+function toggleColumns() {{
+  const song = document.getElementById('song');
+  song.classList.toggle('one-column');
+}}
+
+let currentSize = 80;
+
+function zoomIn() {{
+  currentSize += 10;
+  updateSize();
+}}
+
+function zoomOut() {{
+  if (currentSize > 40) {{
+    currentSize -= 10;
+    updateSize();
+  }}
+}}
+
+function updateSize() {{
+  const imgs = document.querySelectorAll('.acordes img');
+  imgs.forEach(img => {{
+    img.style.height = currentSize + 'px';
+  }});
+}}
+
+let dominanteAtual = "destro";
+
+function toggleDominante() {{
+  dominanteAtual = (dominanteAtual === "destro") ? "canhoto" : "destro";
+  const imgs = document.querySelectorAll('.acordes img');
+  imgs.forEach(img => {{
+    const nomeAcorde = img.alt.split(" ")[0];
+    img.src = "../acordes/" + dominanteAtual + "/" + nomeAcorde + ".png";
+    img.alt = nomeAcorde + " (" + dominanteAtual + ")";
+  }});
+
+  const versaoLabel = document.getElementById("versao-label");
+  versaoLabel.textContent = dominanteAtual.charAt(0).toUpperCase() + dominanteAtual.slice(1);
+}}
+</script>
+</body>
+</html>"""
+    return base
