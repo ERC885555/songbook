@@ -174,9 +174,11 @@ footer {{
   body {{
     margin: 5mm;
   }}
-  header {{
-    margin-bottom: 8px;
-    padding: 6px;
+  header,
+  .invert-controls,
+  .zoom-controls,
+  .layout-toggle {{
+    display: none; /* não imprime esses elementos */
   }}
   .letra {{
     column-gap: 24px;
