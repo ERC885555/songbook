@@ -27,7 +27,9 @@ def gerar_index(pasta_saidas):
     owner = config.get("owner", "Songbook")
     
     linhas = []
-    for nome_arquivo in sorted(os.listdir(pasta_saidas)):
+    musicas_info = []
+
+    for nome_arquivo in os.listdir(pasta_saidas):
         if nome_arquivo.endswith(".html"):
             base = os.path.splitext(nome_arquivo)[0]
             if " - " in base:
@@ -35,9 +37,15 @@ def gerar_index(pasta_saidas):
             else:
                 artista, titulo = "Desconhecido", base
 
-            linhas.append(
-                f"<tr><td><a href='saidas/{nome_arquivo}'>{titulo}</a></td><td>{artista}</td></tr>"
-            )
+            musicas_info.append((titulo, artista, nome_arquivo))
+
+    # Ordena alfabeticamente pelo título
+    musicas_info.sort(key=lambda x: x[0].lower())
+
+    for titulo, artista, nome_arquivo in musicas_info:
+        linhas.append(
+            f"<tr><td><a href='saidas/{nome_arquivo}'>{titulo}</a></td><td>{artista}</td></tr>"
+        )
 
     conteudo = f"""<!doctype html>
 <html lang="pt-BR">
