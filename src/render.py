@@ -66,9 +66,6 @@ hr {{
   margin: 20px 0;
 }}
 header {{
-  position: sticky;
-  top: 0;
-  z-index: 100;
   background-color: #f9f9f9;
   padding: 12px;
   border-radius: 8px;
@@ -212,7 +209,7 @@ footer {{
 
 <footer>
   Criado por Emanuel Robert Costa – Songbook pessoal<br>
-  Gerado em 27/11/2025
+  Gerado em 07/06/2026
 </footer>
 
 <script>
