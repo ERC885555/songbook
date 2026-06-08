@@ -112,7 +112,7 @@ button {{
   top: 10px;
   left: 10px;
 }}
-.layout-toggle, .invert-btn {{
+.layout-toggle, .invert-btn, .menu-btn {{
   background-color: #0078D4;
   color: white;
   border: none;
@@ -120,6 +120,13 @@ button {{
   font-size: 12px;
   border-radius: 4px;
   margin-right: 4px;
+}}
+.menu-btn {{
+  background-color: #4CAF50;
+}}
+.menu-btn:hover {{
+  background-color: #388E3C;
+  transform: scale(1.05);
 }}
 .zoom-controls {{
   position: absolute;
@@ -175,6 +182,7 @@ footer {{
 {gerar_cabecalho_html(titulo, artista, ritmo, acordes, pasta_imagens)}
 
 <div class="layout-controls">
+  <button onclick="voltarMenu()" class="menu-btn">⬅️ Menu</button>
   <button onclick="toggleColumns()" class="layout-toggle">📝 1/2 blocos</button>
   <button onclick="toggleDominante()" class="invert-btn">🔄 Destro/Canhoto</button>
 </div>
@@ -192,6 +200,10 @@ footer {{
 </footer>
 
 <script>
+function voltarMenu() {{
+  window.location.href = "../index.html";
+}}
+
 function toggleColumns() {{
   const song = document.getElementById('song');
   song.classList.toggle('one-column');
