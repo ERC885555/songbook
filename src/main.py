@@ -26,9 +26,7 @@ def gerar_index(pasta_saidas):
     config = carregar_config()
     owner = config.get("owner", "Songbook")
     
-    linhas = []
     musicas_info = []
-
     for nome_arquivo in os.listdir(pasta_saidas):
         if nome_arquivo.endswith(".html"):
             base = os.path.splitext(nome_arquivo)[0]
@@ -36,15 +34,15 @@ def gerar_index(pasta_saidas):
                 artista, titulo = base.split(" - ", 1)
             else:
                 artista, titulo = "Desconhecido", base
-
             musicas_info.append((titulo, artista, nome_arquivo))
 
-    # Ordena alfabeticamente pelo título
+    # Ordena inicialmente por título
     musicas_info.sort(key=lambda x: x[0].lower())
 
+    linhas = []
     for titulo, artista, nome_arquivo in musicas_info:
         linhas.append(
-            f"<tr><td><a href='saidas/{nome_arquivo}'>{titulo}</a></td><td>{artista}</td></tr>"
+            f"<tr><td>{titulo}</td><td>{artista}</td><td><a href='saidas/{nome_arquivo}'>Abrir</a></td></tr>"
         )
 
     conteudo = f"""<!doctype html>
@@ -80,6 +78,7 @@ def gerar_index(pasta_saidas):
     }}
     th {{
       background-color: #f2f2f2;
+      cursor: pointer;
     }}
     tr:hover {{
       background-color: #f9f9f9;
@@ -94,7 +93,11 @@ def gerar_index(pasta_saidas):
 
   <table id="songTable">
     <thead>
-      <tr><th>Música</th><th>Artista</th></tr>
+      <tr>
+        <th onclick="sortTable(0)">Música ⬍</th>
+        <th onclick="sortTable(1)">Artista ⬍</th>
+        <th>Ação</th>
+      </tr>
     </thead>
     <tbody>
       {''.join(linhas)}
@@ -113,6 +116,41 @@ def gerar_index(pasta_saidas):
         rows[i].style.display = text.includes(filter) ? '' : 'none';
       }}
     }});
+
+    function sortTable(n) {{
+      let table = document.getElementById("songTable");
+      let switching = true;
+      let dir = "asc";
+      let switchcount = 0;
+
+      while (switching) {{
+        switching = false;
+        let rows = table.rows;
+        for (let i = 1; i < (rows.length - 1); i++) {{
+          let shouldSwitch = false;
+          let x = rows[i].getElementsByTagName("TD")[n];
+          let y = rows[i + 1].getElementsByTagName("TD")[n];
+          if (dir === "asc" && x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {{
+            shouldSwitch = true;
+            break;
+          }}
+          if (dir === "desc" && x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {{
+            shouldSwitch = true;
+            break;
+          }}
+        }}
+        if (shouldSwitch) {{
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          switching = true;
+          switchcount++;
+        }} else {{
+          if (switchcount === 0 && dir === "asc") {{
+            dir = "desc";
+            switching = true;
+          }}
+        }}
+      }}
+    }}
   </script>
 </body>
 </html>
@@ -120,7 +158,7 @@ def gerar_index(pasta_saidas):
     index_path = os.path.join(os.path.dirname(pasta_saidas), "index.html")
     with open(index_path, "w", encoding="utf-8") as f:
         f.write(conteudo)
-    print(f"✅ Índice gerado com busca: {index_path}")
+    print(f"✅ Índice gerado com busca e ordenação: {index_path}")
 
 def processar_todas_as_musicas():
     raiz = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -134,7 +172,8 @@ def processar_todas_as_musicas():
         print(f"\nProcessando '{nome_arquivo_md}'...")
 
         md_path = os.path.join(pasta_musicas, nome_arquivo_md)
-        md_text = carregar_arquivo_caminho(md_path)
+        with open(md_path, "r", encoding="utf-8") as f:
+            md_text = f.read()
         
         erros = validar_musica(md_text, nome_arquivo_md)
         if erros:
