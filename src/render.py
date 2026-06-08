@@ -33,11 +33,6 @@ def gerar_cabecalho_html(titulo, artista, ritmo, acordes, pasta_imagens):
   <p><strong>Ritmo:</strong> {ritmo}</p>
   <p><strong>Versão:</strong> <span id="versao-label">{dominante.capitalize()}</span></p>
   <div class="acordes">{''.join(imgs)}</div>
-  <div class="invert-controls">
-    <button onclick="toggleDominante()" class="invert-btn">
-      🔄 Alternar Destro/Canhoto
-    </button>
-  </div>
 </header>
 """
 
@@ -81,23 +76,6 @@ header p {{
   font-size: 14px;
   color: #555;
 }}
-.invert-controls {{
-  margin-bottom: 16px;
-}}
-.invert-btn {{
-  background-color: #FF9800;
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  font-size: 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}}
-.invert-btn:hover {{
-  background-color: #e68900;
-  transform: scale(1.05);
-}}
 .acordes {{
   display: flex;
   flex-wrap: wrap;
@@ -134,13 +112,14 @@ button {{
   top: 10px;
   left: 10px;
 }}
-.layout-toggle {{
+.layout-toggle, .invert-btn {{
   background-color: #0078D4;
   color: white;
   border: none;
   padding: 6px 10px;
   font-size: 12px;
   border-radius: 4px;
+  margin-right: 4px;
 }}
 .zoom-controls {{
   position: absolute;
@@ -156,7 +135,7 @@ button {{
   border-radius: 4px;
   margin-left: 4px;
 }}
-.zoom-btn:hover, .layout-toggle:hover {{
+.zoom-btn:hover, .layout-toggle:hover, .invert-btn:hover {{
   background-color: #005fa3;
   transform: scale(1.05);
 }}
@@ -182,7 +161,6 @@ footer {{
   body {{
     margin: 5mm;
   }}
-  .invert-controls,
   .zoom-controls,
   .layout-controls {{
     display: none; /* não imprime botões */
@@ -198,6 +176,7 @@ footer {{
 
 <div class="layout-controls">
   <button onclick="toggleColumns()" class="layout-toggle">📝 1/2 blocos</button>
+  <button onclick="toggleDominante()" class="invert-btn">🔄 Destro/Canhoto</button>
 </div>
 
 <div class="zoom-controls">
