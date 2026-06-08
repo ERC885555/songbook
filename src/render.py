@@ -39,11 +39,6 @@ def gerar_cabecalho_html(titulo, artista, ritmo, acordes, pasta_imagens):
     </button>
   </div>
 </header>
-<div class="zoom-controls">
-  <button onclick="zoomIn()" class="zoom-btn">🔍➕ Zoom In</button>
-  <button onclick="zoomOut()" class="zoom-btn">🔍➖ Zoom Out</button>
-</div>
-<hr>
 """
 
 def render_html(musica_struct, pasta_imagens):
@@ -65,6 +60,7 @@ def render_html(musica_struct, pasta_imagens):
 body {{
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   padding: 24px;
+  position: relative;
 }}
 hr {{
   margin: 20px 0;
@@ -136,16 +132,34 @@ button {{
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }}
-.layout-toggle, .zoom-btn {{
+.layout-controls {{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}}
+.layout-toggle {{
   background-color: #0078D4;
   color: white;
   border: none;
-  padding: 10px 16px;
-  margin-bottom: 12px;
-  margin-right: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 4px;
 }}
-.layout-toggle:hover, .zoom-btn:hover {{
+.zoom-controls {{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}}
+.zoom-btn {{
+  background-color: #0078D4;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-left: 4px;
+}}
+.zoom-btn:hover, .layout-toggle:hover {{
   background-color: #005fa3;
   transform: scale(1.05);
 }}
@@ -167,16 +181,13 @@ footer {{
   color: #888;
   margin-top: 40px;
 }}
-.zoom-controls {{
-  margin-bottom: 16px;
-}}
 @media print {{
   body {{
     margin: 5mm;
   }}
   .invert-controls,
   .zoom-controls,
-  .layout-toggle {{
+  .layout-controls {{
     display: none; /* não imprime botões */
   }}
   .letra {{
@@ -188,9 +199,14 @@ footer {{
 <body>
 {gerar_cabecalho_html(titulo, artista, ritmo, acordes, pasta_imagens)}
 
-<button onclick="toggleColumns()" class="layout-toggle">
-  🎛️ Alternar entre 1 ou 2 blocos
-</button>
+<div class="layout-controls">
+  <button onclick="toggleColumns()" class="layout-toggle">📝 1/2 blocos</button>
+</div>
+
+<div class="zoom-controls">
+  <button onclick="zoomIn()" class="zoom-btn">➕</button>
+  <button onclick="zoomOut()" class="zoom-btn">➖</button>
+</div>
 
 {corpo}
 
